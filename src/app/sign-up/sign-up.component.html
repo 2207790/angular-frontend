@@ -1,0 +1,24 @@
+<form class="example-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <h2>Sign Up</h2>
+  <p>Please fill in all the fields below.</p>
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Enter username" formControlName="username">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Enter email" formControlName="email">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Enter password" type="password" formControlName="password">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput placeholder="Confirm password" type="password" formControlName="confirmPassword">
+  </mat-form-field>
+  <button mat-flat-button color="primary" type="submit" [disabled]="!signUpForm.valid">Register</button>
+  <button mat-raised-button color="primary" type="button" (click)="navigateToSignIn()">Sign In</button>
+  <button mat-raised-button color="primary" type="button" (click)="navigateToHome()">Cancel</button>
+</form>
+  

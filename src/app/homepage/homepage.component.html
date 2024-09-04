@@ -1,0 +1,25 @@
+<div class="homePage">
+    <h2>Welcome to Practical_2</h2>
+    <div class="date">
+      <mat-card class="demo-inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card><br>
+    </div>
+    <div  class="btns">
+        <div class="signIn">
+            <p>Please log into the system:</p>
+            <button mat-raised-button color="primary" type="button" (click)="navigateToSignIn()"
+            matTooltip="Sign In here!" matTooltipClass="example-tooltip-uppercase">Sign In</button>
+        </div><br>
+        <div class="signUp">
+            <p>Please create an account:</p>
+            <button mat-raised-button color="primary" type="button" (click)="navigateToSignUp()"
+            matTooltip="Sign Up here!" matTooltipClass="example-tooltip-uppercase">Sign Up</button>
+        </div>
+    </div>
+    <div>
+        <p><mat-slide-toggle (change)="slide($event)">Slide me!</mat-slide-toggle></p>
+    </div>
+    <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+  </div>
+  
